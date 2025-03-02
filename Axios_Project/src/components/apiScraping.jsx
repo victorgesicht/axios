@@ -13,7 +13,7 @@ const ApiScraping = () => {
             console.log(response.data)
         })
         .catch((error) => console.error('Error fetching data:', error))
-    }, [])
+    }, [data])
 
   return (
     <div>
@@ -22,7 +22,7 @@ const ApiScraping = () => {
         {data.map((item) => {
             return (
                 <div key={item.id}>
-                    <h1 className='font-bold'>{item.name}</h1>
+                    <h1 className='font-bold bg-slate-600'>{item.name}</h1>
                     <h3 className='font-light'>{item.email}</h3>
                     <h4>{item.phone}</h4>
                 </div>                                  
