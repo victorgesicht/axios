@@ -5,6 +5,7 @@ import axios from 'axios'
 const ApiScraping = () => {
     const apiurl='https://jsonplaceholder.typicode.com/users'
     const [data, setData]=useState([])
+    const [count, setCount] = useState(0)
 
     useEffect(() => {
         axios.get(apiurl)
@@ -25,9 +26,19 @@ const ApiScraping = () => {
                     <h1 className='font-bold bg-slate-600'>{item.name}</h1>
                     <h3 className='font-light'>{item.email}</h3>
                     <h4>{item.phone}</h4>
-                </div>                                  
+                </div>
             )
-        })}
+        }
+        )}
+                <div>
+                
+                    <button onClick={() => {setCount (count + 1)}} className='bg-slate-700 text-white p-2 rounded-lg'>
+                        Click me
+                    </button>
+                    <h3>{count} people viewed</h3>    
+            
+                </div>
+        
     </div>
   )
 }  
