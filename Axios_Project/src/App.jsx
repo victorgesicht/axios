@@ -1,7 +1,17 @@
 import ApiScraping from "./components/apiScraping"
+import Navbar from "./components/Navbar"
+
+
 function App() {
   return (
-  <ApiScraping />
+    <>
+   
+    <Navbar/>
+    <ApiScraping/>
+    
+    </>
+    
+
   
   )   
 }
