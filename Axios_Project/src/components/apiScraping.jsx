@@ -19,25 +19,33 @@ const ApiScraping = () => {
   return (
     <div>
         
-        <h2 className='font-mono bg-slate-500'>SANTA'S NAUGHTY LIST</h2>
+        <h2 className=' bg-slate-500'>SANTA'S NAUGHTY LIST</h2>
         {data.map((item) => {
             return (
-                <div className="space-y-6" key={item.id}>
-                    <h3 className='font-bold bg-slate-600'>{item.name}</h3>
-                    <h3 className='font-light'>{item.email}</h3>
-                    <h4>{item.phone}</h4>
+                <div className="rid gap-x-8 gap-y-4 grid-cols-3" key={item.id}>
+                    <div>
+                        <h3 className='font-bold bg-slate-600'>{item.name}</h3>
+                    </div>
+                    <div>
+                        <h3 className='from-neutral-500'>{item.email}</h3>
+                    </div>
+                    <div>
+                        <h4>{item.phone}</h4>
+                    </div>
                 </div>
             )
         }
         )}
-                <div>
+
+
+        <div>
                 
-                    <button onClick={() => {setCount (count + 1)}} className='bg-slate-700 text-white p-2 rounded-lg'>
-                        Click me
-                    </button>
-                    <h3>count:{count} people viewed</h3>    
+            <button onClick={() => {setCount (count + 1)}} className='bg-slate-700 text-white p-2 rounded-lg'>
+                Click me
+            </button>
+                <h3>count:{count} people viewed</h3>    
             
-                </div>
+        </div>
         
     </div>
   )
