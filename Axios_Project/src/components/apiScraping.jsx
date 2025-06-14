@@ -15,10 +15,9 @@ const ApiScraping = () => {
         })
         .catch((error) => console.error('Error fetching data:', error))
     }, [data])
-
-  return (
+    return (
     <div>
-        
+
         <h2 className=' bg-slate-500'>SANTA'S NAUGHTY LIST</h2>
         {data.map((item) => {
             return (
@@ -39,17 +38,17 @@ const ApiScraping = () => {
 
 
         <div>
-                
+
             <button onClick={() => {setCount (count + 1)}} className='bg-slate-700 text-white p-2 rounded-lg'>
                 Click me
             </button>
-                <h3>count:{count} people viewed</h3>    
-            
+                <h3>count:{count} people viewed</h3>
+
         </div>
-        
+
     </div>
   )
-}  
+}
 
 
 export default ApiScraping
